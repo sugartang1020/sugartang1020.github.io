@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://sugartang1020.github.io</id>
+    <title>燕燕的小站</title>
+    <updated>2020-11-18T06:14:20.560Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://sugartang1020.github.io"/>
+    <link rel="self" href="https://sugartang1020.github.io/atom.xml"/>
+    <subtitle>每天进步一点点</subtitle>
+    <logo>https://sugartang1020.github.io/images/avatar.png</logo>
+    <icon>https://sugartang1020.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, 燕燕的小站</rights>
+    <entry>
+        <title type="html"><![CDATA[Laravel 出现 No application encryption key has been specified]]></title>
+        <id>https://sugartang1020.github.io/post/laravel-01/</id>
+        <link href="https://sugartang1020.github.io/post/laravel-01/">
+        </link>
+        <updated>2020-11-18T06:08:10.000Z</updated>
+        <content type="html"><![CDATA[<p>新安装laravel安装运行出现 No application encryption key has been specified<br>
+若文件根目录下没有 .env<br>
+1、.env.example 改名使用命令 copy 修改为 .env<br>
+2、使用命令 php artisan key:generate  获取密码，自动保存到 .env<br>
+3、重新运行，OK。</p>
+<p>如有.env 的情况，直接进行第二步</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[开心第一篇博文]]></title>
+        <id>https://sugartang1020.github.io/post/hello-gridea/</id>
+        <link href="https://sugartang1020.github.io/post/hello-gridea/">
+        </link>
+        <updated>2020-11-17T05:05:21.000Z</updated>
+        <content type="html"><![CDATA[<p>终于迈出历史第一步，注册博客，开始记录学习生活了！！</p>
+]]></content>
+    </entry>
+</feed>
