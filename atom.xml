@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sugartang1020.github.io</id>
     <title>燕燕的小站</title>
-    <updated>2020-11-18T06:14:20.560Z</updated>
+    <updated>2020-11-18T06:39:46.734Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sugartang1020.github.io"/>
     <link rel="self" href="https://sugartang1020.github.io/atom.xml"/>
@@ -10,6 +10,22 @@
     <logo>https://sugartang1020.github.io/images/avatar.png</logo>
     <icon>https://sugartang1020.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 燕燕的小站</rights>
+    <entry>
+        <title type="html"><![CDATA[Laravel 8 提示 Target class [XXXController] does not exist.错误]]></title>
+        <id>https://sugartang1020.github.io/post/laravel-02/</id>
+        <link href="https://sugartang1020.github.io/post/laravel-02/">
+        </link>
+        <updated>2020-11-18T06:18:10.000Z</updated>
+        <content type="html"><![CDATA[<p>Laravel 8配置好路由后，访问提示：<code>Target class [XXXController] does not exist.</code>错误。出现这个错误的原因是Laravel8对路由命名空间做出了更新，而我们仍然在使用Laravel6或者7版本的方式写路由。</p>
+<p>Laravel 8路由配置方式：<br>
+<code>use App\Http\Controllers\UserController;</code><br>
+<code>Route::get('/users', [UserController::class, 'index']);</code></p>
+<p>Laravel 6/7路由配置方式：<br>
+<code>Route::get('/user', 'UserController@index');</code></p>
+<p>请注意Laravel 8中必须要先引用使用到的控制器，或者在定义路由时加上控制器的命名空间，如果仍然想使用Laravel 6/7版本的路由配置方式，那么取消RouteServiceProvider.php中对$namespace的注释即可。<br>
+<code>// protected $namespace = 'App\\Http\\Controllers';</code></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Laravel 出现 No application encryption key has been specified]]></title>
         <id>https://sugartang1020.github.io/post/laravel-01/</id>

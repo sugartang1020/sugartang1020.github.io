@@ -106,22 +106,32 @@
             <div class="shadow-sm post-detail">
                 <article class="post i-card">
                     <h2 class="post-title">
-                        开心第一篇博文
+                        Laravel 8 提示 Target class [XXXController] does not exist.错误
                     </h2>
                     <div class="post-info">
-                        <time class="post-time">2020-11-17</time>
+                        <time class="post-time">2020-11-18</time>
                         
-                            <a href="https://sugartang1020.github.io/tag/Bxm2FowC1/" class="post-tag i-tag
-                            i-tag-info">
-                                #生活
+                            <a href="https://sugartang1020.github.io/tag/j4q-ePOmH/" class="post-tag i-tag
+                            i-tag-other_3">
+                                #php
+                            </a>
+                        
+                            <a href="https://sugartang1020.github.io/tag/YgAg301azS/" class="post-tag i-tag
+                            i-tag-other_3">
+                                #laravel
                             </a>
                         
                     </div>
                     
-                        <div class="post-feature-image" style="background-image: url('https://sugartang1020.github.io/post-images/hello-gridea.jpg')"></div>
-                    
                     <div class="post-content">
-                        <p>终于迈出历史第一步，注册博客，开始记录学习生活了！！</p>
+                        <p>Laravel 8配置好路由后，访问提示：<code>Target class [XXXController] does not exist.</code>错误。出现这个错误的原因是Laravel8对路由命名空间做出了更新，而我们仍然在使用Laravel6或者7版本的方式写路由。</p>
+<p>Laravel 8路由配置方式：<br>
+<code>use App\Http\Controllers\UserController;</code><br>
+<code>Route::get('/users', [UserController::class, 'index']);</code></p>
+<p>Laravel 6/7路由配置方式：<br>
+<code>Route::get('/user', 'UserController@index');</code></p>
+<p>请注意Laravel 8中必须要先引用使用到的控制器，或者在定义路由时加上控制器的命名空间，如果仍然想使用Laravel 6/7版本的路由配置方式，那么取消RouteServiceProvider.php中对$namespace的注释即可。<br>
+<code>// protected $namespace = 'App\\Http\\Controllers';</code></p>
 
                     </div>
                 </article>
@@ -129,15 +139,15 @@
             <div class="row">
                 <div class="next-post col-6">
                     
-                        <div class="next">上一篇</div>
+                </div>
+                <div class="next-post col-6">
+                    
+                        <div class="next">下一篇</div>
                         <a href="https://sugartang1020.github.io/post/laravel-01/">
                             <h3 class="post-title">
                                 Laravel 出现 No application encryption key has been specified
                             </h3>
                         </a>
-                    
-                </div>
-                <div class="next-post col-6">
                     
                 </div>
             </div>
